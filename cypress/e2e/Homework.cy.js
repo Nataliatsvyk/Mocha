@@ -12,7 +12,7 @@ describe('Заповнення форми', () => {
   });
 
   formData.forEach((data, index) => {
-    it(`Тест ${index + 1}: Заповнення форми з ім'ям "${data.name}" і емейлом "${data.email}"`, () => {
+    it(`Тест ${index + 1}: Заповнення форми ім'ям "${data.name}" і емейлом "${data.email}"`, () => {
     
     cy.get('input[placeholder="Jane Doe"]').type(data.name);
     cy.get('input[placeholder="Email"]').eq(0).type(data.email);
